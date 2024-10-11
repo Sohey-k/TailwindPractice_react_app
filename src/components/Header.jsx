@@ -2,7 +2,7 @@ import React from 'react'
 
 function Header() {
   return (
-    <div>Header</div>
+    <div className="bg-purple-200 text-9xl font-bold p-4">Header</div>
   )
 }
 

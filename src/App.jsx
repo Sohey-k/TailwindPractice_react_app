@@ -11,11 +11,19 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Main />
-      <Menu />
-      <Sidebar />
-      <Footer />
+      <div className="flex flex-col min-h-screen">
+        <div className="flex-none">
+          <Header />
+          <Menu />
+        </div>
+        <div className="flex flex-grow">
+          <Sidebar />
+          <Main />
+        </div>
+        <div className="flex-none">
+          <Footer />
+        </div>
+      </div>
     </>
   );
 }
