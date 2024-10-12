@@ -1,9 +1,23 @@
-import React from 'react'
+// import React from "react";
 
 function Main() {
   return (
-    <div className='bg-purple-300 p-4 flex-grow'>Main</div>
-  )
+    <div className="bg-purple-300 p-4 flex-grow">
+      <article className="prose lg:prose-xl">
+        <h1>Garlic bread with cheese: What the science tells us</h1>
+        <p>
+          For years parents have espoused the health benefits of eating garlic
+          bread with cheese to their children, with the food earning such an
+          iconic status in our culture that kids will often dress up as warm,
+          cheesy loaf for Halloween.
+        </p>
+        <p>
+          But a recent study shows that the celebrated appetizer may be linked
+          to a series of rabies cases springing up around the country.
+        </p>
+      </article>
+    </div>
+  );
 }
 
 export default Main;
