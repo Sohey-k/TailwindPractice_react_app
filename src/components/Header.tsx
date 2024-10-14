@@ -2,7 +2,9 @@
 
 function Header() {
   return (
-    <div className="bg-purple-200 text-9xl font-bold p-4">Header</div>
+    <div className="bg-purple-200 pb-2">
+       <h1 className="text-9xl text-purple-700 text-opacity-70 font-serif font-black">RE:ARME</h1>
+    </div>
   )
 }
 
