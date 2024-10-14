@@ -1,8 +1,8 @@
 // import React from "react";
 
-function Main() {
+const Main = () => {
   return (
-    <div className="bg-purple-300 p-4 flex-grow">
+    <div className="p-4 flex-grow">
       <article className="prose lg:prose-xl">
         <h1>Garlic bread with cheese: What the science tells us</h1>
         <p>

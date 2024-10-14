@@ -1,8 +1,16 @@
 // import React from 'react'
+import Button from "./Button";
 
-function Menu() {
+const Menu = () => {
   return (
-    <div className="bg-pink-300">Menu</div>
+    <div>
+      <ul className="flex flex-grow">
+        <Button>About me</Button>
+        <Button>Works</Button>
+        <Button>Skill</Button>
+        <Button>Contact</Button>
+      </ul>
+    </div>
   )
 }
 export default Menu;

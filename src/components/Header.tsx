@@ -1,9 +1,9 @@
 // import React from 'react'
 
-function Header() {
+const Header = () => {
   return (
-    <div className="bg-purple-200 pb-2">
-       <h1 className="text-9xl text-purple-700 text-opacity-70 font-serif font-black">RE:ARME</h1>
+    <div className="pb-2">
+       <h1 className="text-8xl font-serif font-black">RE:ARME</h1>
     </div>
   )
 }
