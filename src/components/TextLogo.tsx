@@ -1,9 +1,13 @@
-import LogoImage from '../assets/Rearme_text_logo.png'
+import LogoImage from '../assets/Rearme_text_logo.png';
 
-const LogoText = () => {
-    return(
-        <img src={LogoImage} alt='Rearm_text logo w-100 h80' />
-    )
-}
+const LogoText = ({ className }: { className?: string }) => {
+  return (
+    <img 
+      src={LogoImage} 
+      alt="Logo text" 
+      className={className} 
+    />
+  );
+};
 
 export default LogoText;

@@ -1,9 +1,13 @@
-import logo from '../assets/Rearme3.png'
+import logo from '../assets/Rearme3.png';
 
-const Logo = () => {
-    return(
-        <img src={logo} alt="Rearme logo" className='h-12 w-12 rounded-full' />
-    )
-}
+const Logo = ({ className }: { className?: string }) => {
+  return (
+    <img 
+      src={logo} 
+      alt="Rearme logo" 
+      className={className} 
+    />
+  );
+};
 
 export default Logo;
