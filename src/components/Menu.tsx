@@ -2,14 +2,15 @@ import Button from "./Button";
 
 const Menu = () => {
   return (
-    <div>
-      <ul className="flex flex-grow">
-        <Button className="btn-outline">About me</Button>
-        <Button>Works</Button>
-        <Button>Skill</Button>
-        <Button>Contact</Button>
+    <nav>
+      <ul className="flex space-x-4 w-100 mt-4 mb-4">
+        <li className="w-1/4"><Button>About me</Button></li>
+        <li className="w-1/4"><Button>Works</Button></li>
+        <li className="w-1/4"><Button>Skill</Button></li>
+        <li className="w-1/4"><Button>Contact</Button></li>
       </ul>
-    </div>
+    </nav>
   );
 };
+
 export default Menu;
