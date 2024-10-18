@@ -1,4 +1,3 @@
-// import React from 'react'
 import Button from "./Button";
 
 const Menu = () => {
@@ -11,6 +10,6 @@ const Menu = () => {
         <Button>Contact</Button>
       </ul>
     </div>
-  )
-}
+  );
+};
 export default Menu;

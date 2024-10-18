@@ -1,5 +1,3 @@
-// import React from "react";
-
 const Main = () => {
   return (
     <div className="p-4 flex-grow">
@@ -18,6 +16,6 @@ const Main = () => {
       </article>
     </div>
   );
-}
+};
 
 export default Main;

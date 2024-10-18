@@ -1,16 +1,15 @@
 {
-    "compilerOptions": {
-      "target": "esnext",
-      "useDefineForClassFields": true,
-      "lib": ["dom", "esnext"],
-      "allowJs": true,       // JavaScriptも引き続き許可する
-      "jsx": "react-jsx",
-      "moduleResolution": "node",
-      "strict": true,
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "forceConsistentCasingInFileNames": true
-    },
-    "include": ["src"]
-  }
-  
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "lib": ["dom", "esnext"],
+    "allowJs": true, // JavaScriptも引き続き許可する
+    "jsx": "react-jsx",
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["src"]
+}
