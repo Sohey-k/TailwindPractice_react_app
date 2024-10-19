@@ -12,10 +12,12 @@ export default {
         darkText: "#333333",
       },
       fontFamily: {
-        quantico: ["Quantico", "sans-serif"],
-        audiowide: ["Audiowide", "sans-serif"],
-        darkerGrotesque: ["Darker Grotesque", "sans-serif"],
+        stalinist: ["Stalinist One", "cursive"],
+        zenKaku: ["Zen Kaku Gothic Antique", "sans"],
       },
+    },
+    fontFamily: {
+      sans: ["Zen Kaku Gothic Antique", "Arial", "sans-serif"],
     },
   },
   plugins: [daisyui, typography], // プラグインを追加
