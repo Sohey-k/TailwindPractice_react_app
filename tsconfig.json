@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "target": "esnext",
+    "module": "ESNext",
     "useDefineForClassFields": true,
     "lib": ["dom", "esnext"],
     "allowJs": true, // JavaScriptも引き続き許可する

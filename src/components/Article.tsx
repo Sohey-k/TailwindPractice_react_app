@@ -12,7 +12,7 @@ interface Article {
   title: string;
   content: string;
   eyecatch: { url: string };
-  category: string;
+  category: { name: string };
   status: string;
 }
 
@@ -27,10 +27,11 @@ const Articles: React.FC = () => {
         contentId: "k98xnv8jw77", // 特定のコンテンツIDを指定
       })
       .then((res) => {
+        console.log("API Response:", res); // デバッグ用にレスポンスを確認
         setArticle(res);
       })
       .catch((err) => {
-        console.error(err);
+        console.error("API Error:", err); // エラーハンドリングを確認
       });
   }, []);
 
@@ -41,20 +42,25 @@ const Articles: React.FC = () => {
   return (
     <div className="container mx-auto">
       <h2 className="text-2xl font-bold">{article.title}</h2>
-      <img
-        src={article.eyecatch.url}
-        alt={article.title}
-        className="w-full h-auto"
-      />
-      <p className="mt-2">{article.content}</p>
+      {article.eyecatch && (
+        <img
+          src={article.eyecatch.url}
+          alt={article.title}
+          className="w-full h-auto"
+        />
+      )}
+      <p
+        className="mt-2"
+        dangerouslySetInnerHTML={{ __html: article.content }}
+      ></p>
       <span className="text-sm text-gray-500">
-        Category: {article.category}
+        Category: {article.category.name}
       </span>
       <span
         className={`ml-4 text-sm ${article.status === "published" ? "text-green-500" : "text-red-500"}`}
-      >
-        {article.status === "published" ? "Published" : "Draft"}
-      </span>
+        >
+          {article.status === "published" ? "Published" : "Draft"}
+        </span>
     </div>
   );
 };
