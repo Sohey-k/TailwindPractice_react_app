@@ -5,7 +5,7 @@ const Header = () => {
   return (
     <div className="flex items-center">
       <Logo className="w-24 h-24 mt-6 ml-4" />
-      <Textlogo_2 className="text-7xl mt-6 ml-4" />
+      <Textlogo_2 className="text-4xl mt-6 ml-4" />
     </div>
   );
 };
