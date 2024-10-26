@@ -41,7 +41,7 @@ const Articles: React.FC = () => {
 
   return (
     <div className="container mx-auto">
-      <h2 className="text-2xl font-bold">{article.title}</h2>
+      <h2 className="font-bold">{article.title}</h2>
       {article.eyecatch && (
         <img
           src={article.eyecatch.url}
@@ -58,9 +58,9 @@ const Articles: React.FC = () => {
       </span>
       <span
         className={`ml-4 text-sm ${article.status === "published" ? "text-green-500" : "text-red-500"}`}
-        >
-          {article.status === "published" ? "Published" : "Draft"}
-        </span>
+      >
+        {article.status === "published" ? "Published" : "Draft"}
+      </span>
     </div>
   );
 };
