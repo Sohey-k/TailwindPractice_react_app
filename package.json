@@ -13,7 +13,9 @@
   },
   "dependencies": {
     "daisyui": "^4.12.12",
+    "html-react-parser": "^5.1.18",
     "microcms-js-sdk": "^3.1.2",
+    "prismjs": "^1.29.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
