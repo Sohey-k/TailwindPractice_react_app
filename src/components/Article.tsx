@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { createClient } from "microcms-js-sdk";
+import parse from 'html-react-parser';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { dracula } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 // microCMSクライアントの作成
 const client = createClient({
@@ -39,6 +42,15 @@ const Articles: React.FC = () => {
     return <div>Loading...</div>;
   }
 
+  const options = {
+    replace: (domNode: any) => {
+      if (domNode.name === 'pre' && domNode.children.name === 'code') {
+        const code = domNode.children.children.data;
+        return <SyntaxHighlighter language="javascript" style={dracula}>{code}</SyntaxHighlighter>;
+      }
+    }
+  };
+
   return (
     <div className="container mx-auto">
       <h2 className="font-bold">{article.title}</h2>
@@ -49,10 +61,7 @@ const Articles: React.FC = () => {
           className="w-full h-auto"
         />
       )}
-      <p
-        className="mt-2"
-        dangerouslySetInnerHTML={{ __html: article.content }}
-      ></p>
+      <div>{parse(article.content, options)}</div>
       <span className="text-sm text-gray-500">
         Category: {article.category.name}
       </span>
