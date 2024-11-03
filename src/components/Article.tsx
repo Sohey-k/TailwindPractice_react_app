@@ -44,12 +44,18 @@ const Articles: React.FC = () => {
 
   const options = {
     replace: (domNode: any) => {
-      if (domNode.name === 'pre' && domNode.children.name === 'code') {
-        const code = domNode.children.children.data;
-        return <SyntaxHighlighter language="javascript" style={dracula}>{code}</SyntaxHighlighter>;
+      // `<pre><code>` タグを探す
+      if (domNode.name === 'pre' && domNode.children && domNode.children[0]?.name === 'code') {
+        const codeContent = domNode.children[0].children[0].data; // コードの内容を取得
+        return (
+          <SyntaxHighlighter language="javascript" style={dracula}>
+            {codeContent}
+          </SyntaxHighlighter>
+        );
       }
     }
   };
+  
 
   return (
     <div className="container mx-auto">
