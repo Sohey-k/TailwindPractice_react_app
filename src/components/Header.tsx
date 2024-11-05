@@ -1,3 +1,5 @@
+// src/components/Header.tsx
+
 import Logo from "./Logo";
 import Textlogo_2 from "./TextLogo_2";
 
