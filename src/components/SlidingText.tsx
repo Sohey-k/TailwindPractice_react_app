@@ -19,7 +19,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-right">
       {/* スライドテキスト */}
       <motion.div
         className="flex" // 横並びにするため
@@ -38,7 +38,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           <motion.span
             key={index}
             variants={letterAnimation}
-            className="font-stalinist font-bold text-black text-5xl"
+            className="font-stalinist font-bold text-black text-3xl"
           >
             {char === ' ' ? '\u00A0' : char} {/* スペースを挿入 */}
           </motion.span>
@@ -53,7 +53,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }} // 1秒かけてフェードイン
-          className="mt-8 w-64 h-64"
+          className="object-cover w-96 h-96"
         />
       )}
     </div>

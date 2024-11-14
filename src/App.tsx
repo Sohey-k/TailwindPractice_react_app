@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
-import Sidebar from "./components/Sidebar";
 import { Base } from './pages/Base';
 import { Identity } from './pages/Identity';
 import { Arsenal } from './pages/Arsenal';
@@ -21,7 +20,6 @@ function App() {
           <Menu />
         </div>
         <div className="flex flex-grow">
-          <Sidebar />
           <main className="flex-grow">
             <Routes>
               <Route path="/" element={<Base />} />
