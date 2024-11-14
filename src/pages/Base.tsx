@@ -1,14 +1,15 @@
-// src/pages/Base.tsx
-
 import React from 'react';
 import SlidingText from '../components/SlidingText';
-// import { motion } from 'framer-motion';
-// import myImage from '../../public/Girl-Rearme.png'; // 画像のパスを指定
+
 export const Base: React.FC = () => {
-    return (
-      <div className="flex justify-center items-center h-screen">
-      <SlidingText text="RE:ARME" />
+  const text = "Welcome to Rearme Web Site!";
+  const imageUrl = "../../public/Girl-Rearme.png"; // 画像の実際のパス
+
+  return (
+    <div className="p-6">
+      <h1 className="font-['Stalinist_One'] text-4xl mb-6">Welcome to Rearme!</h1>
+      <SlidingText text={text} imageUrl={imageUrl} />
     </div>
-    );
-  };
-  
+  );
+};
+

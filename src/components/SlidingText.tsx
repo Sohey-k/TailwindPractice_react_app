@@ -1,12 +1,14 @@
-// SlidingText.tsx
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 type SlidingTextProps = {
   text: string;
+  imageUrl: string;
 };
 
-const SlidingText: React.FC<SlidingTextProps> = ({ text }) => {
+const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
+  const [isTextComplete, setTextComplete] = useState(false); // テキストが完了したかの状態
+
   // 文字ごとにスプリット
   const letters = text.split('');
 
@@ -17,24 +19,44 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text }) => {
   };
 
   return (
-    <motion.div
-      className="flex" // 横並びにするため
-      initial="hidden"
-      animate="visible"
-      variants={{
-        visible: {
-          transition: {
-            staggerChildren: 0.3, // 各文字を0.1秒ずつ遅らせる
+    <div className="flex flex-col items-center">
+      {/* スライドテキスト */}
+      <motion.div
+        className="flex" // 横並びにするため
+        initial="hidden"
+        animate="visible"
+        variants={{
+          visible: {
+            transition: {
+              staggerChildren: 0.1, // 各文字を0.1秒ずつ遅らせる
+            },
           },
-        },
-      }}
-    >
-      {letters.map((char, index) => (
-        <motion.span key={index} variants={letterAnimation} className="font-stalinist text-5xl">
-          {char}
-        </motion.span>
-      ))}
-    </motion.div>
+        }}
+        onAnimationComplete={() => setTextComplete(true)} // アニメーションが完了したら画像を表示
+      >
+        {letters.map((char, index) => (
+          <motion.span
+            key={index}
+            variants={letterAnimation}
+            className="font-['YourFont'] text-2xl"
+          >
+            {char === ' ' ? '\u00A0' : char} {/* スペースを挿入 */}
+          </motion.span>
+        ))}
+      </motion.div>
+
+      {/* テキストアニメーションが完了したら画像を表示 */}
+      {isTextComplete && (
+        <motion.img
+          src={imageUrl}
+          alt="Fading in"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }} // 1秒かけてフェードイン
+          className="mt-8 w-64 h-64"
+        />
+      )}
+    </div>
   );
 };
 
