@@ -28,7 +28,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
         variants={{
           visible: {
             transition: {
-              staggerChildren: 0.1, // 各文字を0.1秒ずつ遅らせる
+              staggerChildren: 0.2, // 各文字を0.2秒ずつ遅らせる
             },
           },
         }}
@@ -52,7 +52,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           alt="Fading in"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1 }} // 1秒かけてフェードイン
+          transition={{ duration: 2 }} // 2秒かけてフェードイン
           className="object-cover w-96 h-96"
         />
       )}

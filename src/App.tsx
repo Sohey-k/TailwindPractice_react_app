@@ -17,7 +17,7 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <div className="flex-none">
           <Header />
-          <div className="flex justify-start p-4">
+          <div className="flex justify-end p-4">
             <Menu />
           </div>
         </div>
