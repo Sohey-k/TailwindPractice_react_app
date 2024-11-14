@@ -1,10 +1,14 @@
 // src/pages/Base.tsx
-export const Base = () => {
+
+import React from 'react';
+import SlidingText from '../components/SlidingText';
+// import { motion } from 'framer-motion';
+// import myImage from '../../public/Girl-Rearme.png'; // 画像のパスを指定
+export const Base: React.FC = () => {
     return (
-      <div className="p-6">
-        <h1 className="font-['Stalinist_One'] text-2xl mb-6">BASE</h1>
-        {/* ここに自己紹介コンテンツ */}
-      </div>
+      <div className="flex justify-center items-center h-screen">
+      <SlidingText text="RE:ARME" />
+    </div>
     );
   };
   
