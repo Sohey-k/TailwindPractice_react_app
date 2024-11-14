@@ -24,13 +24,13 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text }) => {
       variants={{
         visible: {
           transition: {
-            staggerChildren: 0.1, // 各文字を0.1秒ずつ遅らせる
+            staggerChildren: 0.3, // 各文字を0.1秒ずつ遅らせる
           },
         },
       }}
     >
       {letters.map((char, index) => (
-        <motion.span key={index} variants={letterAnimation} className="font-['YourFont'] text-2xl">
+        <motion.span key={index} variants={letterAnimation} className="font-stalinist text-5xl">
           {char}
         </motion.span>
       ))}
