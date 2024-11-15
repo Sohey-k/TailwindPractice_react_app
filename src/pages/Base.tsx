@@ -1,5 +1,5 @@
-import React from 'react';
-import SlidingText from '../components/SlidingText';
+import React from "react";
+import SlidingText from "../components/SlidingText";
 
 export const Base: React.FC = () => {
   const text = "Welcome to Re:arme Web Site!";
@@ -11,4 +11,3 @@ export const Base: React.FC = () => {
     </div>
   );
 };
-

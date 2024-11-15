@@ -1,22 +1,22 @@
 // src/components/Menu.tsx
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation } from "react-router-dom";
 
 const Menu = () => {
   const location = useLocation();
   const navItems = [
-    { title: 'BASE' , path: '/'},
-    { title: 'IDENTITY', path: '/identity' },
-    { title: 'ARSENAL', path: '/arsenal' },
-    { title: 'LOGS', path: '/logs' },
-    { title: 'DEPLOYMENT', path: '/deployment' },
-    { title: 'SIGNAL', path: '/signal' }
+    { title: "BASE", path: "/" },
+    { title: "IDENTITY", path: "/identity" },
+    { title: "ARSENAL", path: "/arsenal" },
+    { title: "LOGS", path: "/logs" },
+    { title: "DEPLOYMENT", path: "/deployment" },
+    { title: "SIGNAL", path: "/signal" },
   ];
 
   return (
     <nav className="bg-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-end space-x-8">
-          {navItems.map(item => (
+          {navItems.map((item) => (
             <Link
               key={item.path}
               to={item.path}
@@ -29,13 +29,16 @@ const Menu = () => {
                 duration-300
                 relative
                 group
-                ${location.pathname === item.path 
-                  ? 'text-purple-800' 
-                  : 'text-purple-600 hover:text-purple-800'}
+                ${
+                  location.pathname === item.path
+                    ? "text-purple-800"
+                    : "text-purple-600 hover:text-purple-800"
+                }
               `}
             >
               {item.title}
-              <span className="
+              <span
+                className="
                 absolute 
                 bottom-0 
                 left-0 
@@ -45,7 +48,8 @@ const Menu = () => {
                 group-hover:w-full 
                 transition-all 
                 duration-300
-              "/>
+              "
+              />
             </Link>
           ))}
         </div>

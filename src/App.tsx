@@ -1,14 +1,14 @@
 // src/App.tsx
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
-import { Base } from './pages/Base';
-import { Identity } from './pages/Identity';
-import { Arsenal } from './pages/Arsenal';
-import { Logs } from './pages/Logs';
-import { Deployment } from './pages/Deployment';
-import { Signal } from './pages/Signal';
+import { Base } from "./pages/Base";
+import { Identity } from "./pages/Identity";
+import { Arsenal } from "./pages/Arsenal";
+import { Logs } from "./pages/Logs";
+import { Deployment } from "./pages/Deployment";
+import { Signal } from "./pages/Signal";
 import "./App.css";
 
 function App() {

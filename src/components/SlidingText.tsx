@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 type SlidingTextProps = {
   text: string;
@@ -10,7 +10,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
   const [isTextComplete, setTextComplete] = useState(false); // テキストが完了したかの状態
 
   // 文字ごとにスプリット
-  const letters = text.split('');
+  const letters = text.split("");
 
   // 各文字のアニメーション設定
   const letterAnimation = {
@@ -40,7 +40,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
             variants={letterAnimation}
             className="font-stalinist font-bold text-black text-3xl"
           >
-            {char === ' ' ? '\u00A0' : char} {/* スペースを挿入 */}
+            {char === " " ? "\u00A0" : char} {/* スペースを挿入 */}
           </motion.span>
         ))}
       </motion.div>

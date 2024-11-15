@@ -6,11 +6,10 @@ type LogoProps = {
 };
 
 const Logo = ({ className }: LogoProps) => {
-  return(
+  return (
     <Link to="/">
-          <img src={logo} alt="Rearme logo" className={className} />
+      <img src={logo} alt="Rearme logo" className={className} />
     </Link>
-
   );
 };
 
