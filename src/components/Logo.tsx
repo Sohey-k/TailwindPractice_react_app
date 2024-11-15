@@ -1,4 +1,4 @@
-import logo from "../assets/Rearme3.png";
+import logo from "../assets/Rearme5.png";
 import { Link } from "react-router-dom";
 
 type LogoProps = {

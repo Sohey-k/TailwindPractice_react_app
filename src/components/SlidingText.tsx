@@ -38,7 +38,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           <motion.span
             key={index}
             variants={letterAnimation}
-            className="font-stalinist font-bold text-black text-3xl"
+            className="font-stalinist font-bold text-black text-xl"
           >
             {char === " " ? "\u00A0" : char} {/* スペースを挿入 */}
           </motion.span>

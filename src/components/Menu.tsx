@@ -13,7 +13,7 @@ const Menu = () => {
   ];
 
   return (
-    <nav className="bg-white shadow-sm">
+    <nav className="bg-yellow-300 shadow-sm">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-end space-x-8">
           {navItems.map((item) => (
@@ -21,7 +21,8 @@ const Menu = () => {
               key={item.path}
               to={item.path}
               className={`
-                font-['Stalinist_One']
+                font-stalinist
+                font-bold
                 py-4
                 text-lg
                 tracking-wider
