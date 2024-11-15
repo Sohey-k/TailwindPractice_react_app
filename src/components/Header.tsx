@@ -6,7 +6,7 @@ import Textlogo_2 from "./TextLogo_2";
 const Header = () => {
   return (
     <div className="flex items-center ">
-      <Logo className="w-16 h-16 mt-6 ml-4 " />
+      <Logo className="w-24 h-24" />
       <Textlogo_2 className="text-6xl mt-4 ml-4" />
     </div>
   );
