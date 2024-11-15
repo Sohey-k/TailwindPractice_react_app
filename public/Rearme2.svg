@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="210mm"
-   height="297mm"
-   viewBox="0 0 210 297"
+   width="179.61443mm"
+   height="179.63686mm"
+   viewBox="0 0 179.61443 179.63686"
    version="1.1"
    id="svg1"
    xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +46,8 @@
     </clipPath>
   </defs>
   <g
-     id="layer1">
+     id="layer1"
+     transform="translate(-10.861225,-59.02838)">
     <circle
        style="fill:#000000;stroke-width:0.264583"
        id="path1"
@@ -55,7 +56,8 @@
        r="89.784798" />
   </g>
   <g
-     id="layer2">
+     id="layer2"
+     transform="translate(-10.861225,-59.02838)">
     <text
        xml:space="preserve"
        style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:35.4537px;font-family:FRIZON;-inkscape-font-specification:'FRIZON, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;display:inline;fill:#ffffff;stroke-width:0.553966"
@@ -69,17 +71,20 @@
          dx="-2.2571735 0.53802913 1.3514458 -0.096044354 -0.17934304 -0.25362939 0.63407344">Re:arme</tspan></text>
   </g>
   <g
-     id="layer3">
+     id="layer3"
+     transform="translate(-10.861225,-59.02838)">
     <circle
        style="fill:#ffffff;stroke-width:0.264583"
        id="path12"
        cx="149.12375"
        cy="222.11636"
        r="13.899087"
-       clip-path="url(#clipPath14)" />
+       clip-path="url(#clipPath14)"
+       transform="translate(0.11208941,0.15692517)" />
   </g>
   <g
-     id="layer4">
+     id="layer4"
+     transform="translate(-10.861225,-59.02838)">
     <text
        xml:space="preserve"
        style="font-size:35.4536px;font-family:FRIZON;-inkscape-font-specification:'FRIZON, Normal';fill:#ffffff;stroke-width:0.264583"
@@ -93,10 +98,11 @@
   </g>
   <g
      id="layer6"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(-10.861225,-59.02838)">
     <rect
        style="fill:url(#pattern2);stroke:none"
-       transform="scale(0.26458333)"
+       transform="matrix(0.26458333,0,0,0.26458333,-0.04483576,-0.06725365)"
        width="589.72406"
        height="261.57382"
        x="-2.4774098"
@@ -106,7 +112,8 @@
   </g>
   <g
      id="layer5"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(-10.861225,-59.02838)">
     <circle
        style="display:inline;fill:#ffffff;stroke-width:0.264583"
        id="path3"
@@ -122,7 +129,8 @@
   </g>
   <g
      id="layer7"
-     style="display:inline">
+     style="display:inline"
+     transform="translate(-10.861225,-59.02838)">
     <circle
        style="display:inline;fill:#ffffff;stroke-width:0.921479"
        id="path3-5"
