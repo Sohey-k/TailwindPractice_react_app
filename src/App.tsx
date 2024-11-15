@@ -15,11 +15,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
-        <div className="flex-none">
+        <div className="flex items-center justify-between p-4">
           <Header />
-          <div className="flex justify-end p-4">
-            <Menu />
-          </div>
+          <Menu />
         </div>
         <div className="flex flex-grow">
           <main className="flex-grow">
