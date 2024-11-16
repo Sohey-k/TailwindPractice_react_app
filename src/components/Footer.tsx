@@ -1,5 +1,8 @@
 const Footer = () => {
-  return <div className="font-extrabold text-5xl pb-8 bg-yellow-300">Footer</div>;
+  return (<div>
+         <button className="btn btn-primary">Button</button>
+
+         </div>);
 };
 
 export default Footer;

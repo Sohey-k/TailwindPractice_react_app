@@ -13,12 +13,12 @@ export default {
       },
       fontFamily: {
         stalinist: ["Stalinist One", "cursive"],
-        zenKaku: ["Zen Kaku Gothic Antique", "sans"],
+        zenKaku: ["Zen Kaku Gothic Antique", "sans-serif"],
       },
     },
-    fontFamily: {
-      sans: ["Zen Kaku Gothic Antique", "Arial", "sans-serif"],
-    },
+  },
+  daisyui: {
+    themes: ["light", "dark", "cupcake", "cyberpunk", "acid"],
   },
   plugins: [daisyui, typography], // プラグインを追加
 };
