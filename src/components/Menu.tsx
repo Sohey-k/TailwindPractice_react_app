@@ -1,7 +1,11 @@
 // src/components/Menu.tsx
 import { Link, useLocation } from "react-router-dom";
 
-const Menu = () => {
+type Menuprops = {
+  className?: string;  // classNameは任意に設定（渡すことができる）
+};
+
+const Menu = ({ className}: Menuprops) => {
   const location = useLocation();
   const navItems = [
     { title: "BASE", path: "/" },
@@ -12,8 +16,10 @@ const Menu = () => {
     { title: "SIGNAL", path: "/signal" },
   ];
 
+
+
   return (
-    <nav className="bg-yellow-300 shadow-sm">
+    <nav className={`${className} bg-yellow-300 shadow-sm`}>
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex justify-end space-x-8">
           {navItems.map((item) => (
