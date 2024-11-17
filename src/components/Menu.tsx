@@ -32,8 +32,8 @@ const Menu = ({ className }: MenuProps) => {
             <div className="navbar flex justify-between items-center">
               {/* Left side: Logo placeholder */}
               <div className="flex items-center">
-                <Logo className="w-[72px] h-[72px] m-4 min-w-[72px] flex-shrink-0" />
-                <Textlogo_2 className="pl-4 text-2xl sm:text-3xl md:text-4xl z-0" />
+                <Logo className="w-[72px] h-[72px] m-2 min-w-[72px] flex-shrink-0" />
+                <Textlogo_2 className="text-2xl sm:text-3xl md:text-4xl z-0" />
               </div>
 
               {/* Right side: Menu for desktop */}
@@ -42,7 +42,7 @@ const Menu = ({ className }: MenuProps) => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`font-stalinist py-4 ml-4 text-sm tracking-wider transition-all duration-300 relative group ${
+                    className={`font-stalinist bg-yellow-300 py-4 ml-8 text-sm tracking-wider transition-all duration-300 relative group ${
                       location.pathname === item.path
                         ? "text-purple-800"
                         : "text-purple-600 hover:text-purple-800"
