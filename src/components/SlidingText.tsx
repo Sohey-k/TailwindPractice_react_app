@@ -7,54 +7,61 @@ type SlidingTextProps = {
 };
 
 const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
-  const [isTextComplete, setTextComplete] = useState(false); // テキストが完了したかの状態
+  const [isImageComplete, setImageComplete] = useState(false);
 
-  // 文字ごとにスプリット
-  const letters = text.split("");
+  // 行ごとにテキストを分割
+  const lines = text.split("\n");
 
-  // 各文字のアニメーション設定
+  // 文字ごとにスライドインするアニメーション設定
   const letterAnimation = {
     hidden: { opacity: 0, x: 50 }, // 右から非表示で開始
-    visible: { opacity: 1, x: 0 }, // 左に移動しながら表示
+    visible: { opacity: 1, x: 0 },
   };
 
   return (
-    <div className="flex flex-col items-right">
-      {/* スライドテキスト */}
-      <motion.div
-        className="flex" // 横並びにするため
-        initial="hidden"
-        animate="visible"
-        variants={{
-          visible: {
-            transition: {
-              staggerChildren: 0.2, // 各文字を0.2秒ずつ遅らせる
-            },
-          },
-        }}
-        onAnimationComplete={() => setTextComplete(true)} // アニメーションが完了したら画像を表示
-      >
-        {letters.map((char, index) => (
-          <motion.span
-            key={index}
-            variants={letterAnimation}
-            className="font-stalinist font-bold text-black text-xl"
-          >
-            {char === " " ? "\u00A0" : char} {/* スペースを挿入 */}
-          </motion.span>
-        ))}
-      </motion.div>
+    <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
+      {/* 画像フェードイン */}
+      <motion.img
+        src={imageUrl}
+        alt="Fading in"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="object-cover w-64 h-64 md:w-96 md:h-96"
+        onAnimationComplete={() => setImageComplete(true)}
+      />
 
-      {/* テキストアニメーションが完了したら画像を表示 */}
-      {isTextComplete && (
-        <motion.img
-          src={imageUrl}
-          alt="Fading in"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 2 }} // 2秒かけてフェードイン
-          className="object-cover w-96 h-96"
-        />
+      {/* スライドテキスト - スマホサイズでは非表示 */}
+      {isImageComplete && (
+        <motion.div
+          className="hidden md:flex flex-col space-y-2" // mdサイズ以上で表示
+          initial="hidden"
+          animate="visible"
+          variants={{
+            visible: {
+              transition: {
+                staggerChildren: 0.1, // 各文字を0.1秒ずつ遅らせて表示
+              },
+            },
+          }}
+        >
+          {lines.map((line, lineIndex) => (
+            <motion.div
+              key={lineIndex}
+              className="flex"
+            >
+              {line.split("").map((char, charIndex) => (
+                <motion.span
+                  key={charIndex}
+                  variants={letterAnimation} // 各文字にアニメーションを適用
+                  className="font-stalinist font-bold text-black text-xl"
+                >
+                  {char === " " ? "\u00A0" : char} {/* スペースを挿入 */}
+                </motion.span>
+              ))}
+            </motion.div>
+          ))}
+        </motion.div>
       )}
     </div>
   );
