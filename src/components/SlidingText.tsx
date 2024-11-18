@@ -14,8 +14,8 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
 
   // 文字ごとにスライドインするアニメーション設定
   const letterAnimation = {
-    hidden: { opacity: 0, x: 50 }, // 右から非表示で開始
-    visible: { opacity: 1, x: 0 },
+    hidden: { opacity: 0}, 
+    visible: { opacity: 1},
   };
 
   return (
@@ -40,7 +40,9 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           variants={{
             visible: {
               transition: {
-                staggerChildren: 0.1, // 各文字を0.1秒ずつ遅らせて表示
+                staggerChildren: 0.08, // 各文字を0.1秒ずつ遅らせて表示
+                ease: "easeOut", // シャープに切れ味のあるアニメーション
+                duration: 10, // 短めの表示時間でよりシャープに
               },
             },
           }}
