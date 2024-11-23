@@ -14,8 +14,8 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
 
   // 文字ごとにスライドインするアニメーション設定
   const letterAnimation = {
-    hidden: { opacity: 0}, 
-    visible: { opacity: 1},
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
   };
 
   return (
@@ -48,10 +48,7 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           }}
         >
           {lines.map((line, lineIndex) => (
-            <motion.div
-              key={lineIndex}
-              className="flex"
-            >
+            <motion.div key={lineIndex} className="flex">
               {line.split("").map((char, charIndex) => (
                 <motion.span
                   key={charIndex}

@@ -31,12 +31,12 @@ function App() {
             </Routes>
           </main>
         </div>
-        <footer className="font-extrabold text-5xl pb-8 bg-yellow-300 w-full">
-      <div className="max-w-7xl mx-auto px-4 py-4">
-        {/* <ThreeAnimation /> */}
-        <Footer />
-      </div>
-    </footer>
+        <footer className="font-extrabold text-5xl pb-8 bg-yellow-300 w-full fixed bottom-0">
+          <div className="max-w-7xl mx-auto px-4 py-4">
+            {/* <ThreeAnimation /> */}
+            <Footer />
+          </div>
+        </footer>
       </div>
     </BrowserRouter>
   );

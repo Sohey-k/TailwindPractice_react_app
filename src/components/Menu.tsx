@@ -1,8 +1,8 @@
 // src/components/Menu.tsx
 
-import Logo from './Logo';
-import { Link, useLocation } from 'react-router-dom';
-import Textlogo_2 from './TextLogo_2';
+import Logo from "./Logo";
+import { Link, useLocation } from "react-router-dom";
+import Textlogo_2 from "./TextLogo_2";
 
 type MenuProps = {
   className?: string;
@@ -24,7 +24,7 @@ const Menu = ({ className }: MenuProps) => {
   return (
     <div className="drawer">
       <input id="my-drawer" type="checkbox" className="drawer-toggle" />
-      
+
       {/* Page content */}
       <div className="drawer-content">
         <nav className={`${className} bg-yellow-300 shadow-sm`}>
@@ -55,7 +55,10 @@ const Menu = ({ className }: MenuProps) => {
               </div>
 
               {/* Mobile Menu: Toggle button */}
-              <label htmlFor="my-drawer" className="btn btn-ghost drawer-button lg:hidden">
+              <label
+                htmlFor="my-drawer"
+                className="btn btn-ghost drawer-button lg:hidden"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   className="h-5 w-5"
@@ -90,7 +93,9 @@ const Menu = ({ className }: MenuProps) => {
                     : "text-purple-600 hover:text-purple-800"
                 }`}
                 onClick={() => {
-                  const checkbox = document.getElementById('my-drawer') as HTMLInputElement;
+                  const checkbox = document.getElementById(
+                    "my-drawer"
+                  ) as HTMLInputElement;
                   if (checkbox) checkbox.checked = false;
                 }}
               >
