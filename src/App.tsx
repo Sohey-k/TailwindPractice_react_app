@@ -9,7 +9,6 @@ import { Arsenal } from "./pages/Arsenal";
 import { Logs } from "./pages/Logs";
 import { Deployment } from "./pages/Deployment";
 import { Signal } from "./pages/Signal";
-import ThreeAnimation from "./components/ThreeAnimation";
 import "./App.css";
 
 function App() {
@@ -33,7 +32,6 @@ function App() {
         </div>
         <footer className="font-extrabold text-5xl pb-8 bg-yellow-300 w-full fixed bottom-0">
           <div className="max-w-7xl mx-auto px-4 py-4">
-            {/* <ThreeAnimation /> */}
             <Footer />
           </div>
         </footer>
