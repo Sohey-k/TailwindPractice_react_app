@@ -6,7 +6,7 @@ export const Base: React.FC = () => {
   const imageUrl = "../../public/Girl-Rearme3.png"; // 画像の実際のパス
 
   return (
-    <div className="p-6">
+    <div className="p-[8rem]">
       <SlidingText text={text} imageUrl={imageUrl} />
     </div>
   );

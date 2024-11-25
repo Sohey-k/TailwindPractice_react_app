@@ -18,7 +18,7 @@ function App() {
         <div className="bg-yellow-300 fixed w-full top-0">
           <Menu />
         </div>
-        <div className="flex flex-grow overflow-y-auto pt-[10rem] pb-[5rem]">
+        <div className="flex flex-grow overflow-y-auto pt-[4rem] pb-[5rem]">
           <main className="flex-grow max-w-7xl mx-auto px-4 py-6">
             <Routes>
               <Route path="/" element={<Base />} />

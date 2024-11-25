@@ -23,10 +23,10 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
       {/* 画像フェードイン */}
       <motion.img
         src={imageUrl}
-        alt="Fading in"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
+        alt="Zoom In"
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 2, ease: "easeOut" }}
         className="object-cover w-64 h-64 md:w-96 md:h-96"
         onAnimationComplete={() => setImageComplete(true)}
       />
