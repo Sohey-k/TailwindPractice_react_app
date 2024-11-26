@@ -61,7 +61,7 @@ const Articles: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto">
+    <div className="container mx-auto prose-sm">
       <h2 className="font-bold">{article.title}</h2>
       {article.eyecatch && (
         <img
