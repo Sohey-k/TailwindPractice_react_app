@@ -1,12 +1,12 @@
 // src/pages/Arsenal.tsx
 export const Arsenal = () => {
   return (
-    <div className="pt-8 pb-8 font-zenKaku">
+    <div className="pt-8 pb-8 font-zenKaku relative z-0">
       <h1 className="font-bold text-2xl pt-2 pb-2">スキルセット</h1>
-      <div className="overflow-x-auto"  data-theme="cyberpunk">
+      <div className="overflow-x-auto">
         <table className="table table-zebra w-full pt-2 pb-2">
           <thead>
-            <tr>
+            <tr className="bg-yellow-300">
               <th>カテゴリ</th>
               <th>スキル</th>
               <th>経験</th> 
@@ -47,10 +47,10 @@ export const Arsenal = () => {
         </table>
       </div>
 
-      <div className="overflow-x-auto mt-8"  data-theme="cyberpunk">
+      <div className="overflow-x-auto mt-8">
         <table className="table table-zebra w-full">
           <thead>
-            <tr>
+            <tr className="bg-yellow-300">
               <th>資格名</th>
               <th>ステータス</th>
             </tr>

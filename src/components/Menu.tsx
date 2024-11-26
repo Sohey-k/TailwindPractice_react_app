@@ -33,7 +33,7 @@ const Menu = ({ className }: MenuProps) => {
               {/* Left side: Logo placeholder */}
               <div className="flex items-center">
                 <Logo className="w-[72px] h-[72px] m-2 min-w-[72px] flex-shrink-0" />
-                <Textlogo_2 className="text-2xl sm:text-3xl md:text-4xl z-0" />
+                <Textlogo_2 className="text-2xl sm:text-3xl md:text-4xl z-1" />
               </div>
 
               {/* Right side: Menu for desktop */}

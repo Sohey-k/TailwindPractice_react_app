@@ -1,5 +1,4 @@
-// src/pages/Identity.tsx
-import React, { useState } from "react";
+import React from "react";
 
 type Section = {
   title?: string;
@@ -34,7 +33,7 @@ const sections: Section[] = [
   },
 ];
 
-const formatContent = (text: string) =>
+const formatContent = (text: string = "") =>
   text.split("\n").map((line, index) => (
     <React.Fragment key={index}>
       {line}
@@ -42,38 +41,24 @@ const formatContent = (text: string) =>
     </React.Fragment>
   ));
 
-export const Identity = ({
-  title = "未設定",
-  content = "コンテンツがありません。",
-}: Section) => {
-  //オンマウスオーバー時に、usestateフックを設定。
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
+export const Identity = () => {
   return (
-    <div className="w-full mx-auto pt-16">
+    <div className="w-full mx-auto pt-16 font-zenKaku">
       {sections.map((section, index) => (
-        <div
-          key={index}
-          className={`collapse border border-base-300 bg-base-100 rounded-box my-2 ${
-            openIndex === index
-              ? "collapse-open bg-yellow-300 font-bold text-purple-600"
-              : "collapse-close"
-          }`}
-          onMouseEnter={() => setOpenIndex(index)} // マウスオーバーで開く
-          onMouseLeave={() => setOpenIndex(null)} // マウスが離れたら閉じる
+        <div 
+          key={index} 
+          className="mb-8 p-6 bg-yellow-300 rounded-lg shadow-md"
         >
-          <input type="checkbox" id={`section-${index}`} />
-          <label
-            htmlFor={`section-${index}`}
-            className="collapse-title text-lg font-bold cursor-pointer"
-          >
-            {section.title || title} {/* ここでtitleをデフォルト値として使う */}
-          </label>
-          <div className="collapse-content">
-            <p>{formatContent(section.content || content)}</p>
-          </div>
+          <h2 className="text-xl font-bold text-purple-600 mb-4">
+            {section.title}
+          </h2>
+          <p className="text-purple-800 leading-relaxed">
+            {formatContent(section.content)}
+          </p>
         </div>
       ))}
     </div>
   );
 };
+
+export default Identity;

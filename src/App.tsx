@@ -15,11 +15,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
-        <div className="bg-yellow-300 fixed w-full top-0">
+        <div className="bg-yellow-300 fixed w-full top-0 z-50">
           <Menu />
         </div>
         <div className="flex flex-grow overflow-y-auto pt-[4rem] pb-[5rem]">
-          <main className="flex-grow max-w-7xl mx-auto px-4 py-6">
+          <main className="flex-grow max-w-7xl mx-auto px-4 py-6 relative z-0">
             <Routes>
               <Route path="/" element={<Base />} />
               <Route path="/identity" element={<Identity />} />
@@ -30,7 +30,7 @@ function App() {
             </Routes>
           </main>
         </div>
-        <footer className="font-extrabold text-5xl pb-8 bg-yellow-300 w-full fixed bottom-0">
+        <footer className="font-extrabold text-5xl pb-8 bg-yellow-300 w-full fixed z-50 bottom-0">
           <div className="max-w-7xl mx-auto px-4 py-4">
             <Footer />
           </div>
