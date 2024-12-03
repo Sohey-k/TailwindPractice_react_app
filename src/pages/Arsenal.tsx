@@ -36,7 +36,7 @@ export const Arsenal = () => {
             <tr>
               <td>OS</td>
               <td>Linux, WSL2, Windows, Mac</td>
-              <td>-</td>
+              <td>実務有</td>
             </tr>
             <tr>
               <td>ツール</td>
@@ -74,7 +74,7 @@ export const Arsenal = () => {
             </tr>
             <tr>
               <td>ITパスポート</td>
-              <td>取得予定</td>
+              <td>取得済み</td>
             </tr>
           </tbody>
         </table>
