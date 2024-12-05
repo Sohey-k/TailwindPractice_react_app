@@ -1,4 +1,15 @@
 // src/pages/Signal.tsx
+
+import React, { useState } from "react";
+
+const ContractForm = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: ""
+  });
+}
 export const Signal = () => {
   return (
     <div className="p-6">
