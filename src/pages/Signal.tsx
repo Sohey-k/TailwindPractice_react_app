@@ -24,7 +24,7 @@ export const Signal = () => {
 
   return (
     <div className="pt-8 pb-8 font-zenKaku relative z-0">
-      <h1 className="font-bold text-2xl pt-2 pb-2">コンタクト</h1>
+      <h1 className="font-bold text-2xl pt-8">コンタクト</h1>
       <hr className="border-t-2 border-purple-600 my-4" />
 
       <p className="mb-6 text-gray-700">

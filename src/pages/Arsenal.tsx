@@ -2,7 +2,7 @@
 export const Arsenal = () => {
   return (
     <div className="pt-8 pb-8 font-zenKaku relative z-0">
-      <h1 className="font-bold text-2xl pt-2 pb-2">スキルセット</h1>
+      <h1 className="font-bold text-2xl pt-8 pb-2">スキルセット</h1>
       <div className="overflow-x-auto">
         <table className="table table-zebra w-full pt-2 pb-2">
           <thead>
