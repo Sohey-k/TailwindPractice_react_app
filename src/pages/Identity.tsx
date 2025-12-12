@@ -19,7 +19,7 @@ const sections: Section[] = [
   {
     title: "自分の強み",
     content:
-      "【自動化による効率化】\n Python ETLスクリプトで処理時間を3時間から10分に短縮。VBAでも業務効率50%改善を実現。\n【ネットワーク機器の運用経験】\n Juniper機器（SRX4200、MX240、EX4650）での実務経験。VXLAN/EVPN環境の運用実績。コンフィグ解析やACL設定の理解など、マルチベンダー環境への対応力あり。\n【大規模環境の運用経験】\n 700台以上の無線APをJuniper MIST経由で監視・運用。障害時の交換作業サポート含む運用業務に従事。\n【独学による技術習得力】\n AWS Solutions Architect Associate（861/1000点）、JNCIA-Junos（97%）、CCNA、LPIC-2を取得。Docker、Git、Python、TypeScript/Reactなど幅広い技術スタックを習得し、Vercelでの継続的デプロイメントも実践。",
+      "【自動化による効率化】\n Python ETLスクリプトで処理時間を3時間から10分に短縮。VBAでも業務効率50%改善を実現。\n \n【ネットワーク機器の運用経験】\n Juniper機器（SRX4200、MX240、EX4650）での実務経験。VXLAN/EVPN環境の運用実績。コンフィグ解析やACL設定の理解など、マルチベンダー環境への対応力あり。\n \n【大規模環境の運用経験】\n 700台以上の無線APをJuniper MIST経由で監視・運用。障害時の交換作業サポート含む運用業務に従事。\n \n【独学による技術習得力】\n AWS Solutions Architect Associate（861/1000点）、JNCIA-Junos（97%）、CCNA、LPIC-2を取得。Docker、Git、Python、TypeScript/Reactなど幅広い技術スタックを習得し、Vercelでの継続的デプロイメントも実践。",
   },
   {
     title: "エンジニア志望の動機",
