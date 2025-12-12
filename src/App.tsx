@@ -14,12 +14,12 @@ import "./App.css";
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col h-screen overflow-hidden">
         <div className="bg-yellow-300 fixed w-full top-0 z-50">
           <Menu />
         </div>
-        <div className="flex flex-grow overflow-y-auto pt-[4rem] pb-[5rem]">
-          <main className="flex-grow max-w-7xl mx-auto px-4 py-6 relative z-0">
+        <div className="flex flex-grow overflow-y-auto mt-[4rem] mb-[5rem]">
+          <main className="flex-grow max-w-7xl mx-auto px-4 relative z-0">
             <Routes>
               <Route path="/" element={<Base />} />
               <Route path="/identity" element={<Identity />} />
