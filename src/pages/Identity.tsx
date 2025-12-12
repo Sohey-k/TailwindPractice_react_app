@@ -19,7 +19,7 @@ const sections: Section[] = [
   {
     title: "自分の強み",
     content:
-      "【探求心】: 興味を持ったことを徹底的に調べ、学び続ける姿勢が成長の原動力です。\n【好奇心】:  多くの分野に興味を持ち、幅広い知識を吸収しています。複数のことに同時に取り組むこともありますが、調整しながら着実に学んでいます。\n【集中力】: 物事に集中すると長時間取り組むことができ、難しい課題にも根気強く対応できます。\n【協調性】: チーム内で状況を把握し、柔軟に対応することで円滑なコミュニケーションを心掛けています。\n【適応力】: 新しい環境や変化にも素早くなじみ、挑戦を楽しみながら結果を出すことができます。\n【自走力】: 独学を続ける中で身につけた問題解決力を活かし、新しい技術にも積極的に取り組み、自信を持って自己解決できる力を磨いています。",
+      "【自動化による効率化】Python ETLスクリプトで処理時間を3時間から10分に短縮。VBAでも業務効率50%改善を実現。\n【ネットワーク機器の運用経験】Juniper機器（SRX4200、MX240、EX4650）での実務経験。VXLAN/EVPN環境の運用実績。コンフィグ解析やACL設定の理解など、マルチベンダー環境への対応力あり。\n【大規模環境の運用経験】700台以上の無線APをJuniper MIST経由で監視・運用。障害時の交換作業サポート含む運用業務に従事。\n【独学による技術習得力】AWS Solutions Architect Associate（861/1000点）、JNCIA-Junos（97%）、CCNA、LPIC-2を取得。Docker、Git、Python、TypeScript/Reactなど幅広い技術スタックを習得し、Vercelでの継続的デプロイメントも実践。",
   },
   {
     title: "エンジニア志望の動機",
@@ -45,8 +45,8 @@ export const Identity = () => {
   return (
     <div className="w-full mx-auto pt-16 font-zenKaku">
       {sections.map((section, index) => (
-        <div 
-          key={index} 
+        <div
+          key={index}
           className="mb-8 p-6 bg-yellow-300 rounded-lg shadow-md"
         >
           <h2 className="text-xl font-bold text-purple-600 mb-4">
