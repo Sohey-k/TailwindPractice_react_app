@@ -20,7 +20,7 @@ export const Arsenal = () => {
             </tr>
             <tr>
               <td>フレームワーク</td>
-              <td>React, Flask, Laravel</td>
+              <td>React, Flask</td>
               <td>React（本ポートフォリオ）, Flask（監視アプリ）</td>
             </tr>
             <tr>
