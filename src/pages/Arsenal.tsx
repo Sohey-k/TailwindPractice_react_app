@@ -9,39 +9,29 @@ export const Arsenal = () => {
             <tr className="bg-yellow-300">
               <th>カテゴリ</th>
               <th>スキル</th>
-              <th>経験</th> 
+              <th>経験</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>フロントエンド</td>
-              <td>HTML, CSS</td>
-              <td>実務半年ほど</td>
-            </tr>
-            <tr>
-              <td>バックエンド</td>
-              <td>PHP, Ruby, Python, JavaScript, TypeScript</td>
-              <td>学習中</td>
+              <td>プログラミング言語</td>
+              <td>Python, TypeScript, JavaScript, Bash, VBA</td>
+              <td>実務経験あり（Python ETL, VBA自動化）</td>
             </tr>
             <tr>
               <td>フレームワーク</td>
-              <td>Laravel, Rails, React</td>
-              <td>学習中</td>
+              <td>React, Flask, Laravel</td>
+              <td>React（本ポートフォリオ）, Flask（監視アプリ）</td>
             </tr>
             <tr>
-              <td>インフラ</td>
-              <td>Docker, Git, GitHub, AWS, GCP</td>
-              <td>学習中</td>
+              <td>ネットワーク機器</td>
+              <td>Juniper（SRX/MX/EX）, Juniper MIST, Cisco</td>
+              <td>実務10ヶ月（VXLAN/EVPN環境）</td>
             </tr>
             <tr>
-              <td>OS</td>
-              <td>Linux, WSL2, Windows, Mac</td>
-              <td>実務有</td>
-            </tr>
-            <tr>
-              <td>ツール</td>
-              <td>VBA</td>
-              <td>実務半年ほど</td>
+              <td>クラウド/インフラ</td>
+              <td>AWS, Docker, Git/GitHub, Vercel, Linux</td>
+              <td>AWS SAA取得, CI/CD実践中</td>
             </tr>
           </tbody>
         </table>
@@ -52,28 +42,24 @@ export const Arsenal = () => {
           <thead>
             <tr className="bg-yellow-300">
               <th>資格名</th>
-              <th>ステータス</th>
+              <th>スコア/ステータス</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>AWS ソリューションアーキテクト アソシエイト</td>
-              <td>取得済み</td>
+              <td>AWS Solutions Architect Associate</td>
+              <td>取得済み（861/1000点）</td>
+            </tr>
+            <tr>
+              <td>JNCIA-Junos</td>
+              <td>取得済み（97%）</td>
             </tr>
             <tr>
               <td>CCNA</td>
               <td>取得済み</td>
             </tr>
             <tr>
-              <td>LPIC-1</td>
-              <td>取得済み</td>
-            </tr>
-            <tr>
-              <td>Webクリエイター能力認定試験エキスパート</td>
-              <td>取得済み</td>
-            </tr>
-            <tr>
-              <td>ITパスポート</td>
+              <td>LPIC-2</td>
               <td>取得済み</td>
             </tr>
           </tbody>
