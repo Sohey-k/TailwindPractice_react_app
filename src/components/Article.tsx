@@ -23,18 +23,21 @@ const Articles: React.FC = () => {
   const [article, setArticle] = useState<Article | null>(null);
 
   useEffect(() => {
-    // microCMSから記事データを取得
+    // 最新記事を1件取得
     client
       .get({
         endpoint: "blogs",
-        contentId: "k98xnv8jw77", // 特定のコンテンツIDを指定
+        queries: {
+          limit: 1,
+          orders: '-publishedAt' // 公開日の降順（新しい順）
+        }
       })
       .then((res) => {
-        console.log("API Response:", res); // デバッグ用にレスポンスを確認
-        setArticle(res);
+        console.log("API Response:", res);
+        setArticle(res.contents[0]); // 配列の最初の要素
       })
       .catch((err) => {
-        console.error("API Error:", err); // エラーハンドリングを確認
+        console.error("API Error:", err);
       });
   }, []);
 
