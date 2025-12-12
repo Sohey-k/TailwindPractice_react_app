@@ -13,12 +13,12 @@ const Menu = ({ className }: MenuProps) => {
   const location = useLocation();
 
   const navItems = [
-    { title: "BASE", path: "/" },
-    { title: "IDENTITY", path: "/identity" },
-    { title: "ARSENAL", path: "/arsenal" },
-    { title: "LOGS", path: "/logs" },
-    { title: "DEPLOYMENT", path: "/deployment" },
-    { title: "SIGNAL", path: "/signal" },
+    { title: "HOME", path: "/" },
+    { title: "PROFILE", path: "/identity" },
+    { title: "SKILLS", path: "/arsenal" },
+    { title: "BLOGS", path: "/logs" },
+    { title: "WORKS", path: "/deployment" },
+    { title: "CONTACT", path: "/signal" },
   ];
 
   return (
