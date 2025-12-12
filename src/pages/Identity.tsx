@@ -38,7 +38,7 @@ const formatContent = (text: string = "") =>
 
 export const Identity = () => {
   return (
-    <div className="w-full mx-auto pt-16 font-zenKaku">
+    <div className="w-full h-full overflow-y-auto px-4 pt-16 pb-8 font-zenKaku">
       {sections.map((section, index) => (
         <div
           key={index}
