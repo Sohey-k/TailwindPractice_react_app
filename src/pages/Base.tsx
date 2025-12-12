@@ -7,7 +7,7 @@ export const Base: React.FC = () => {
   const imageUrl = "/Rearme2.svg";
 
   return (
-    <div className="flex justify-center items-center h-[calc(100vh-100px)] overflow-hidden px-4">
+    <div className="w-full h-full flex justify-center items-center px-4">
       <SlidingText text={text} imageUrl={imageUrl} />
     </div>
   );

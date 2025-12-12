@@ -1,6 +1,5 @@
 // src/App.tsx
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Menu from "./components/Menu";
 import { Base } from "./pages/Base";
@@ -18,8 +17,8 @@ function App() {
         <div className="bg-yellow-300 fixed w-full top-0 z-50">
           <Menu />
         </div>
-        <div className="flex flex-grow overflow-y-auto mt-[4rem] mb-[5rem]">
-          <main className="flex-grow max-w-7xl mx-auto px-4 relative z-0">
+        <div className="flex-grow overflow-y-auto mt-[4rem] mb-[5rem]">
+          <main className="h-full max-w-7xl mx-auto px-4 relative z-0">
             <Routes>
               <Route path="/" element={<Base />} />
               <Route path="/identity" element={<Identity />} />
