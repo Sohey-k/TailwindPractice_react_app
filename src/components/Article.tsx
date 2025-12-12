@@ -74,11 +74,6 @@ const Articles: React.FC = () => {
       <span className="text-sm text-gray-500">
         Category: {article.category.name}
       </span>
-      <span
-        className={`ml-4 text-sm ${article.status === "published" ? "text-green-500" : "text-red-500"}`}
-      >
-        {article.status === "published" ? "Published" : "Draft"}
-      </span>
     </div>
   );
 };
