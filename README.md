@@ -1,6 +1,6 @@
 # REARME Portfolio
 
-![REARME Logo](public/Rearme2.svg)
+<img src="public/Rearme2.svg" alt="REARME Logo" width="200">
 
 ## 🎯 このサイトについて
 
