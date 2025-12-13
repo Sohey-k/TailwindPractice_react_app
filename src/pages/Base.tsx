@@ -3,7 +3,7 @@ import React from "react";
 import SlidingText from "../components/SlidingText";
 
 export const Base: React.FC = () => {
-  const text = "Welcome to Re:arme\nWeb Site!";
+  const text = "RE:ARME\nRELOAD - REBUILD - RECODE";
   const imageUrl = "/Rearme2.svg";
 
   return (
