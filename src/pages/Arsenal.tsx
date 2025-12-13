@@ -6,7 +6,7 @@ export const Arsenal = () => {
       <div className="overflow-x-auto">
         <table className="table table-zebra w-full pt-2 pb-2">
           <thead>
-            <tr className="bg-yellow-300">
+            <tr className="bg-purple-600">
               <th>カテゴリ</th>
               <th>スキル</th>
               <th>経験</th>
@@ -40,7 +40,7 @@ export const Arsenal = () => {
       <div className="overflow-x-auto mt-8">
         <table className="table table-zebra w-full">
           <thead>
-            <tr className="bg-yellow-300">
+            <tr className="bg-purple-600">
               <th>資格名</th>
               <th>スコア/ステータス</th>
             </tr>
