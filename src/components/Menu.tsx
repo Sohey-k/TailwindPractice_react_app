@@ -31,9 +31,9 @@ const Menu = ({ className }: MenuProps) => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="navbar flex justify-between items-center">
               {/* Left side: Logo placeholder */}
-              <div className="flex items-center">
+              <div className="flex items-center relative z-10">
                 <Logo className="w-[72px] h-[72px] m-2 min-w-[72px] flex-shrink-0" />
-                <Textlogo_2 className="text-2xl sm:text-3xl md:text-4xl z-1" />
+                <Textlogo_2 className="text-2xl sm:text-3xl md:text-4xl" />
               </div>
 
               {/* Right side: Menu for desktop */}
@@ -42,11 +42,10 @@ const Menu = ({ className }: MenuProps) => {
                   <Link
                     key={item.path}
                     to={item.path}
-                    className={`font-stalinist bg-yellow-300 py-4 ml-8 text-sm tracking-wider transition-all duration-300 relative group ${
-                      location.pathname === item.path
-                        ? "text-purple-800"
-                        : "text-purple-600 hover:text-purple-800"
-                    }`}
+                    className={`font-stalinist bg-yellow-300 py-4 ml-8 text-sm tracking-wider transition-all duration-300 relative group ${location.pathname === item.path
+                      ? "text-purple-800"
+                      : "text-purple-600 hover:text-purple-800"
+                      }`}
                   >
                     {item.title}
                     <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-purple-600 group-hover:w-full transition-all duration-300" />
@@ -80,18 +79,17 @@ const Menu = ({ className }: MenuProps) => {
       </div>
 
       {/* Drawer sidebar */}
-      <div className="drawer-side">
+      <div className="drawer-side z-50">
         <label htmlFor="my-drawer" className="drawer-overlay"></label>
         <ul className="menu p-4 w-80 h-full bg-yellow-300 bg-opacity-90">
           {navItems.map((item) => (
             <li key={item.path}>
               <Link
                 to={item.path}
-                className={`text-lg font-stalinist py-4 ${
-                  location.pathname === item.path
-                    ? "text-purple-800"
-                    : "text-purple-600 hover:text-purple-800"
-                }`}
+                className={`text-lg font-stalinist py-4 ${location.pathname === item.path
+                  ? "text-purple-800"
+                  : "text-purple-600 hover:text-purple-800"
+                  }`}
                 onClick={() => {
                   const checkbox = document.getElementById(
                     "my-drawer"
