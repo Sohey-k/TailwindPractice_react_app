@@ -32,11 +32,11 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           alt="REARME Logo"
           initial={{ opacity: 0 }}
           animate={{
-            opacity: 1,
+            opacity: 0.5,
             rotate: isHovered ? 360 : 0
           }}
           transition={{
-            opacity: { duration: 1 },
+            opacity: { duration: 5 },
             rotate: {
               duration: 2,
               repeat: isHovered ? Infinity : 0,
