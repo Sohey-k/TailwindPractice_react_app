@@ -6,7 +6,7 @@ export const projects = [
         shortDesc: "React + TypeScript で構築したポートフォリオサイト",
         description: "React、TypeScript、Tailwind CSSを使用して構築した個人ポートフォリオサイト。生成AI（Claude）と協働しながら開発し、レスポンシブデザイン、アニメーション、microCMSを活用したブログ機能を実装。",
         tech: ["React", "TypeScript", "Tailwind CSS", "Vercel", "microCMS"],
-        githubUrl: "https://github.com/Sohey-k/portfolio"
+        githubUrl: "https://github.com/Sohey-k/rearme-portfolio"
     },
     {
         id: "flask-ping",
