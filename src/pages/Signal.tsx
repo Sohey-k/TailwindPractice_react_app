@@ -11,12 +11,6 @@ export const Signal = () => {
       description: "コードやプロジェクトはこちら"
     },
     {
-      name: "NOTE",
-      url: "https://note.com/deft_fish2452",
-      icon: <IoDocumentText className="text-5xl text-purple-600" />,
-      description: "技術ブログ・学習記録"
-    },
-    {
       name: "X (Twitter)",
       url: "https://x.com/reep_of_face",
       icon: <FaXTwitter className="text-5xl text-purple-600" />,
