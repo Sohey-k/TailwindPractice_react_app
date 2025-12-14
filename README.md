@@ -1,6 +1,6 @@
 # REARME Portfolio
 
-<img src="public/Rearme2.svg" alt="REARME Logo" width="200">
+<img src="public/Rearme5.png" alt="REARME Logo" width="200">
 
 ## 🎯 このサイトについて
 
@@ -8,7 +8,7 @@ RE:ARME（再武装）をコンセプトに作成した個人ポートフォリ�
 「常に進化し続けるエンジニア」という姿勢を表現するため、生成AI（Claude）と協働しながら開発しました。
 エレクトロニック/グリッチエフェクトを取り入れたデザインが特徴です。
 
-**🔗 サイトはこちら:** https://sohey-k-portfolio.vercel.app
+**🔗 サイトはこちら:** https://rearme.vercel.app/
 
 ## 🛠️ 使っている技術
 
@@ -68,9 +68,8 @@ MIT License
 
 ## 👤 作った人
 
-**トリパノーム (Sohey-K)**  
-インフラエンジニア / 元クラブイベントオーガナイザー
+**Sohey-K**  
+インフラエンジニア
 
 - GitHub: [@Sohey-k](https://github.com/Sohey-k)
 - X: [@reep_of_face](https://x.com/reep_of_face)
-- NOTE: [deft_fish2452](https://note.com/deft_fish2452)
