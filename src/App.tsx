@@ -8,6 +8,7 @@ import { Arsenal } from "./pages/Arsenal";
 import { Logs } from "./pages/Logs";
 import { Deployment } from "./pages/Deployment";
 import { Signal } from "./pages/Signal";
+import { ProjectDetail } from "./pages/ProjectDetail";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <Route path="/arsenal" element={<Arsenal />} />
               <Route path="/logs" element={<Logs />} />
               <Route path="/deployment" element={<Deployment />} />
+              <Route path="/deployment/:id" element={<ProjectDetail />} />
               <Route path="/signal" element={<Signal />} />
             </Routes>
           </main>
