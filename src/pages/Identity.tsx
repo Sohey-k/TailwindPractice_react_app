@@ -38,7 +38,7 @@ const formatContent = (text: string = "") =>
 
 export const Identity = () => {
   return (
-    <div className="w-full h-full overflow-y-auto px-4 pt-8 pb-16 font-zenKaku">
+    <div className="w-full h-full overflow-y-auto px-4 pt-8 pb-8 font-zenKaku">
       <h1 className="font-bold text-2xl pt-8">プロフィール</h1>
       <hr className="border-t-8 border-purple-600 my-4" />
       {sections.map((section, index) => (
@@ -49,7 +49,7 @@ export const Identity = () => {
           <h2 className="text-xl font-bold text-purple-600 mb-4">
             {section.title}
           </h2>
-          <p className="text-purple-800 leading-relaxed">
+          <p className="text-base text-purple-800 leading-relaxed">
             {formatContent(section.content)}
           </p>
         </div>

@@ -53,9 +53,32 @@ const Articles: React.FC = () => {
         domNode.children &&
         domNode.children[0]?.name === "code"
       ) {
-        const codeContent = domNode.children[0].children[0].data; // コードの内容を取得
+        const codeNode = domNode.children[0];
+
+        // class名から言語を取得（例: "language-javascript" → "javascript"）
+        let language = "javascript"; // デフォルト
+        if (codeNode.attribs && codeNode.attribs.class) {
+          const match = codeNode.attribs.class.match(/language-(\w+)/);
+          if (match) {
+            language = match[1];
+          }
+        }
+
+        // コード内容を取得（再帰的に取得）
+        const getCodeContent = (node: any): string => {
+          if (node.type === 'text') {
+            return node.data;
+          }
+          if (node.children) {
+            return node.children.map(getCodeContent).join('');
+          }
+          return '';
+        };
+
+        const codeContent = getCodeContent(codeNode);
+
         return (
-          <SyntaxHighlighter language="javascript" style={dracula}>
+          <SyntaxHighlighter language={language} style={dracula}>
             {codeContent}
           </SyntaxHighlighter>
         );
@@ -64,19 +87,30 @@ const Articles: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto prose-sm">
-      <h2 className="font-bold">{article.title}</h2>
-      {article.eyecatch && (
-        <img
-          src={article.eyecatch.url}
-          alt={article.title}
-          className="w-full h-auto"
-        />
-      )}
-      <div>{parse(article.content, options)}</div>
-      <span className="text-sm text-gray-500">
-        Category: {article.category.name}
-      </span>
+    <div className="container mx-auto px-4 py-8">
+      <article className="prose max-w-none
+        prose-headings:text-purple-600 
+        prose-h2:border-b-2 prose-h2:border-yellow-400 prose-h2:pb-2
+        prose-h3:text-purple-700
+        prose-a:text-purple-600 prose-a:hover:text-purple-800
+        prose-strong:text-purple-700
+        prose-code:before:content-none prose-code:after:content-none
+      ">
+        <h1 className="text-2xl font-bold text-purple-600 mb-4">
+          {article.title}
+        </h1>
+        {article.eyecatch && (
+          <img
+            src={article.eyecatch.url}
+            alt={article.title}
+            className="w-full h-auto rounded-lg shadow-md mb-6"
+          />
+        )}
+        <div>{parse(article.content, options)}</div>
+        <span className="text-sm text-gray-500 mt-6 block">
+          Category: {article.category.name}
+        </span>
+      </article>
     </div>
   );
 };
