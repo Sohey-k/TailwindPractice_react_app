@@ -28,6 +28,38 @@ const sections: Section[] = [
   },
 ];
 
+// 🎓 資格情報（新規追加）
+const certifications = [
+  {
+    name: "AWS Solutions Architect Associate",
+    imageUrl: "https://images.credly.com/size/680x680/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png",
+    badgeUrl: "https://www.credly.com/badges/463ffea8-a3ac-4c84-ae3f-f025c992250c/public_url",
+    issuer: "Amazon Web Services",
+    date: "2025"
+  },
+  {
+    name: "CCNA",
+    imageUrl: "https://images.credly.com/size/680x680/images/683783d8-eaac-4c37-a14d-11bd8a36321d/ccna_600.png",
+    badgeUrl: "https://www.credly.com/badges/95de6b5b-5aeb-4219-a53c-be5b692f1f88/public_url",
+    issuer: "Cisco",
+    date: "2024"
+  },
+  {
+    name: "JNCIA-Junos",
+    imageUrl: "https://images.credly.com/size/680x680/images/115e08d1-6b0c-40b2-aa15-5906022f4db0/L_01_asso_JNCIA-Junos.png",
+    badgeUrl: "https://www.credly.com/badges/da557ce8-4758-4334-843d-db70217d7e0e/public_url",
+    issuer: "Juniper Networks",
+    date: "2025"
+  },
+  {
+    name: "LPIC-2",
+    imageUrl: "https://images.credly.com/size/680x680/images/f4f1d8bf-e7d3-4b2a-9c0b-2d124ff701c3/blob",
+    badgeUrl: "https://www.credly.com/badges/39b0a477-9966-46c8-814a-253b0a699103/public_url",
+    issuer: "LPI",
+    date: "2025"
+  },
+];
+
 const formatContent = (text: string = "") =>
   text.split("\n").map((line, index) => (
     <React.Fragment key={index}>
@@ -54,6 +86,53 @@ export const Identity = () => {
           </p>
         </div>
       ))}
+
+      {/* 🎓 認証済み資格セクション（新規追加） */}
+      <div className="mb-8 p-6 bg-yellow-300 rounded-lg shadow-md">
+        <h2 className="text-xl font-bold text-purple-600 mb-4">
+          認証済み資格
+        </h2>
+        <p className="text-base text-purple-800 mb-6">
+          クリックすると Credly で検証できます
+        </p>
+
+        {/* バッジグリッド */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {certifications.map((cert) => (
+            <a
+              key={cert.name}
+              href={cert.badgeUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-yellow-300 hover:bg-yellow-200 p-4 rounded-lg shadow hover:shadow-lg transition-all hover:scale-105"
+            >
+              {/* バッジ画像 */}
+              <div className="flex justify-center mb-3">
+                <img
+                  src={cert.imageUrl}
+                  alt={cert.name}
+                  className="w-20 h-20 object-contain"
+                />
+              </div>
+
+              {/* 資格名 */}
+              <h3 className="text-xs font-bold text-purple-600 text-center mb-1">
+                {cert.name}
+              </h3>
+
+              {/* 発行元 */}
+              <p className="text-xs text-purple-800 text-center opacity-70">
+                {cert.issuer}
+              </p>
+
+              {/* 取得年 */}
+              <p className="text-xs text-purple-600 text-center mt-1">
+                {cert.date}
+              </p>
+            </a>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
