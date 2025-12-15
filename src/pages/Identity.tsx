@@ -104,7 +104,7 @@ export const Identity = () => {
               href={cert.badgeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-yellow-300 hover:bg-yellow-200 p-4 rounded-lg shadow hover:shadow-lg transition-all hover:scale-105"
+              className="bg-yellow-300 hover:bg-yellow-400 p-4 rounded-lg shadow hover:shadow-lg transition-all hover:scale-105"
             >
               {/* バッジ画像 */}
               <div className="flex justify-center mb-3">
