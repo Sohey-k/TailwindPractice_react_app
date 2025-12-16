@@ -29,6 +29,18 @@ export const ProjectDetail = () => {
                 <h1 className="text-3xl font-bold text-purple-600">{project.name}</h1>
             </div>
 
+            {/* ↓ この部分を追加 */}
+            {project.demoGif && (
+                <div className="mb-6 rounded-lg overflow-hidden border-2 border-purple-200 max-w-md">
+                    <img
+                        src={project.demoGif}
+                        alt={`${project.name}のデモ`}
+                        className="w-full h-auto"
+                    />
+                </div>
+            )}
+            {/* ↑ ここまで追加 */}
+
             <div className="mb-6">
                 <h2 className="font-bold text-purple-600 mb-2 text-xl">概要</h2>
                 <p className="text-gray-700 leading-relaxed">{project.description}</p>
