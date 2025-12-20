@@ -21,12 +21,12 @@ export const projects = [
     },
     {
         id: "automation",
-        name: "Python Automation Scripts",
+        name: "Juniper Syslog ETL Pipeline",
         icon: "🐍",
-        shortDesc: "業務効率化スクリプト集",
-        description: "業務効率化のために作成したPythonスクリプト集。ETL処理、ログ解析、レポート生成などを自動化。処理時間を3時間から10分に短縮した実績あり。",
-        tech: ["Python", "pandas", "openpyxl"],
-        githubUrl: "https://github.com/Sohey-k/automation-scripts",
-        demoGif: "/demo/portfolio-demo.gif"  // ← この行を追加
+        shortDesc: "実務知見を元に再構築した高速ログ解析ツール",
+        description: "ネットワーク運用における大規模ログ解析の知見をベースに、汎用的なツールとしてスクラッチで再設計・実装。ETL（抽出・加工・出力）手法を用いて、手作業では数時間を要する解析工程を約5分に短縮するパイプラインを構築しました。実務レベルのデータ処理ロジックと、ユーザー利便性を両立したプロトタイプです。",
+        tech: ["Python", "Pandas", "Streamlit", "xlsxwriter"],
+        githubUrl: "https://github.com/Sohey-k/juniper-syslog-filter",
+        demoGif: "/junpsersyslogfilter.gif"  // ← この行を追加
     }
 ];
