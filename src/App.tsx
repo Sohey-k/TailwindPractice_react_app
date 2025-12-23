@@ -9,6 +9,7 @@ import { Logs } from "./pages/Logs";
 import { Deployment } from "./pages/Deployment";
 import { Signal } from "./pages/Signal";
 import { ProjectDetail } from "./pages/ProjectDetail";
+import { BlogDetail } from "./pages/BlogDetail";
 import "./App.css";
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
               <Route path="/identity" element={<Identity />} />
               <Route path="/arsenal" element={<Arsenal />} />
               <Route path="/logs" element={<Logs />} />
+              <Route path="/logs/:id" element={<BlogDetail />} />  // ← この行を追加
               <Route path="/deployment" element={<Deployment />} />
               <Route path="/deployment/:id" element={<ProjectDetail />} />
               <Route path="/signal" element={<Signal />} />
