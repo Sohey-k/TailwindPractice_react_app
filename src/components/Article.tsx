@@ -5,10 +5,16 @@ import SyntaxHighlighter from "react-syntax-highlighter";
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 // microCMSクライアントの作成
-const client = createClient({
-  serviceDomain: import.meta.env.VITE_SERVICE_DOMAIN, // サービスID
-  apiKey: import.meta.env.VITE_MICROCMS_API_KEY, // APIキー
-});
+const createMicroCMSClient = () => {
+  const serviceDomain = import.meta.env.VITE_SERVICE_DOMAIN;
+  const apiKey = import.meta.env.VITE_MICROCMS_API_KEY;
+
+  if (!serviceDomain || !apiKey) {
+    throw new Error("microCMS environment variables are not set");
+  }
+
+  return createClient({ serviceDomain, apiKey });
+};
 
 interface Article {
   id: string;
@@ -21,25 +27,36 @@ interface Article {
 
 const Articles: React.FC = () => {
   const [article, setArticle] = useState<Article | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    // 最新記事を1件取得
-    client
-      .get({
-        endpoint: "blogs",
-        queries: {
-          limit: 1,
-          orders: '-publishedAt' // 公開日の降順（新しい順）
-        }
-      })
-      .then((res) => {
-        console.log("API Response:", res);
-        setArticle(res.contents[0]); // 配列の最初の要素
-      })
-      .catch((err) => {
-        console.error("API Error:", err);
-      });
+    try {
+      const client = createMicroCMSClient();
+
+      client
+        .get({
+          endpoint: "blogs",
+          queries: {
+            limit: 1,
+            orders: "-publishedAt",
+          },
+        })
+        .then((res) => {
+          setArticle(res.contents[0]);
+        })
+        .catch((err) => {
+          console.error("API Error:", err);
+          setError("Failed to fetch article");
+        });
+    } catch (err) {
+      console.warn("microCMS is not configured:", err);
+      setError("microCMS is not configured");
+    }
   }, []);
+
+  if (error) {
+    return <div>Blog is not available.</div>;
+  }
 
   if (!article) {
     return <div>Loading...</div>;
