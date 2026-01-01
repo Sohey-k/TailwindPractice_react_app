@@ -7,7 +7,7 @@ export const projects = [
         description: "前職で実装したSyslog ETLスクリプトをAWSサーバーレスアーキテクチャで再構築。S3、Lambda、DynamoDB、CloudFrontを組み合わせ、24時間分のログ(4,733件)を約1分で自動解析し、HTTPS経由でダッシュボード可視化。冪等性を確保しgit cloneから環境構築可能。AI(Claude/Copilot)との協業により約6時間で開発完了し、月額コストほぼ無料($0.06)を実現。実務で培ったログ解析の知見を、モダンなクラウドネイティブ技術で再実装したプロジェクト。",
         tech: ["Python", "AWS Lambda", "S3", "DynamoDB", "CloudFront", "Terraform", "IaC"],
         githubUrl: "https://github.com/Sohey-k/syslog-analytics-serverless",
-        demoGif: "/syslog-serverless-demo.gif"  // ← デモ画像があればここに追加
+        demoGif: "/junipersyslogserverless.gif"  // ← デモ画像があればここに追加
     },
     {
         id: "automation",
