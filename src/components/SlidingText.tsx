@@ -1,5 +1,5 @@
 // src/components/SlidingText.tsx
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
 type SlidingTextProps = {
@@ -10,6 +10,43 @@ type SlidingTextProps = {
 const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
   const [isImageComplete, setImageComplete] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
+  const [glitchActive, setGlitchActive] = useState(true);
+  const glitchTimerRef = useRef<number | null>(null);
+
+  // 初回ロード時のグリッチエフェクトを5秒後に停止
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setGlitchActive(false);
+    }, 5000); // 5秒後に停止
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  // ホバー解除後のグリッチ停止タイマーをセット
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+
+    // 既存のタイマーがあればクリア
+    if (glitchTimerRef.current) {
+      clearTimeout(glitchTimerRef.current);
+    }
+
+    // 3秒後にグリッチを停止
+    glitchTimerRef.current = setTimeout(() => {
+      setGlitchActive(false);
+    }, 3000);
+  };
+
+  const handleMouseEnter = () => {
+    setIsHovered(true);
+    setGlitchActive(true);
+
+    // ホバー時は停止タイマーをクリア
+    if (glitchTimerRef.current) {
+      clearTimeout(glitchTimerRef.current);
+      glitchTimerRef.current = null;
+    }
+  };
 
   const lines = text.split("\n");
 
@@ -23,8 +60,8 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
       {/* 画像 + グリッチエフェクト */}
       <div
         className="relative cursor-pointer"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       >
         {/* メインロゴ - レコード回転 */}
         <motion.img
@@ -54,13 +91,13 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           className="absolute top-0 left-0 object-contain w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 opacity-40 mix-blend-screen pointer-events-none"
           style={{ filter: "sepia(1) hue-rotate(0deg) saturate(6)" }}
           animate={{
-            x: [0, -4, 3, -5, 2, -3, 4, -2, 0, 5, -4, 0],
-            y: [0, 2, -3, 4, -2, 3, -4, 2, -3, 0, 3, 0],
+            x: glitchActive ? [0, -4, 3, -5, 2, -3, 4, -2, 0, 5, -4, 0] : 0,
+            y: glitchActive ? [0, 2, -3, 4, -2, 3, -4, 2, -3, 0, 3, 0] : 0,
             rotate: isHovered ? 360 : 0
           }}
           transition={{
-            x: { duration: 0.8, repeat: Infinity, ease: "linear" },
-            y: { duration: 0.8, repeat: Infinity, ease: "linear" },
+            x: { duration: 0.8, repeat: glitchActive ? Infinity : 0, ease: "linear" },
+            y: { duration: 0.8, repeat: glitchActive ? Infinity : 0, ease: "linear" },
             rotate: {
               duration: 2,
               repeat: isHovered ? Infinity : 0,
@@ -76,13 +113,13 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           className="absolute top-0 left-0 object-contain w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 opacity-40 mix-blend-screen pointer-events-none"
           style={{ filter: "sepia(1) hue-rotate(180deg) saturate(6)" }}
           animate={{
-            x: [0, 5, -2, 4, -3, 2, -5, 3, -2, 0, -4, 0],
-            y: [0, -3, 2, -4, 3, -2, 4, -3, 2, 0, -2, 0],
+            x: glitchActive ? [0, 5, -2, 4, -3, 2, -5, 3, -2, 0, -4, 0] : 0,
+            y: glitchActive ? [0, -3, 2, -4, 3, -2, 4, -3, 2, 0, -2, 0] : 0,
             rotate: isHovered ? 360 : 0
           }}
           transition={{
-            x: { duration: 0.7, repeat: Infinity, ease: "linear" },
-            y: { duration: 0.7, repeat: Infinity, ease: "linear" },
+            x: { duration: 0.7, repeat: glitchActive ? Infinity : 0, ease: "linear" },
+            y: { duration: 0.7, repeat: glitchActive ? Infinity : 0, ease: "linear" },
             rotate: {
               duration: 2,
               repeat: isHovered ? Infinity : 0,
@@ -98,15 +135,15 @@ const SlidingText: React.FC<SlidingTextProps> = ({ text, imageUrl }) => {
           className="absolute top-0 left-0 object-contain w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 mix-blend-screen pointer-events-none"
           style={{ filter: "sepia(1) hue-rotate(90deg) saturate(5)" }}
           animate={{
-            x: [0, 3, -4, 5, -3, 4, -2, 3, -5, 2, 0],
-            y: [0, -2, 3, -3, 4, -2, 3, -4, 2, -3, 0],
-            opacity: [0.25, 0, 0.25, 0, 0.25],
+            x: glitchActive ? [0, 3, -4, 5, -3, 4, -2, 3, -5, 2, 0] : 0,
+            y: glitchActive ? [0, -2, 3, -3, 4, -2, 3, -4, 2, -3, 0] : 0,
+            opacity: glitchActive ? [0.25, 0, 0.25, 0, 0.25] : 0,
             rotate: isHovered ? 360 : 0
           }}
           transition={{
-            x: { duration: 0.6, repeat: Infinity, ease: "linear" },
-            y: { duration: 0.6, repeat: Infinity, ease: "linear" },
-            opacity: { duration: 0.6, repeat: Infinity, ease: "linear" },
+            x: { duration: 0.6, repeat: glitchActive ? Infinity : 0, ease: "linear" },
+            y: { duration: 0.6, repeat: glitchActive ? Infinity : 0, ease: "linear" },
+            opacity: { duration: 0.6, repeat: glitchActive ? Infinity : 0, ease: "linear" },
             rotate: {
               duration: 2,
               repeat: isHovered ? Infinity : 0,

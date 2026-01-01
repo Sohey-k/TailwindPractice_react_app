@@ -25,12 +25,12 @@ export const skillsData: Skill[] = [
     {
         category: "ネットワーク機器",
         skills: "Juniper（SRX/MX/EX）, Juniper MIST, Cisco",
-        experience: "実務10ヶ月（VXLAN/EVPN環境）"
+        experience: "実務経験あり（VXLAN/EVPN環境）"
     },
     {
         category: "クラウド/インフラ",
-        skills: "AWS, Docker, Git/GitHub, Vercel, Linux",
-        experience: "AWS SAA取得, CI/CD実践中"
+        skills: "AWS, Docker, Git/GitHub, Terraform, Vercel, Linux",
+        experience: "AWS SAA取得, IaC実践中"
     },
 ];
 
